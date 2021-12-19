@@ -1,0 +1,96 @@
+.navigation {
+	flex: 1;
+	&__menu {
+		//transition show menu
+		@include respond(maiz) {
+			flex-direction: column;
+			position: fixed;
+			background-color: color(primary, a);
+			height: 100vh;
+			top: $header-heigh + 2rem;
+			right: -100%;
+			width: 50%;
+		}
+	}
+
+	&__list {
+		display: flex;
+		list-style: none;
+		flex: 40%;
+		gap: 2rem;
+		@include respond(maiz) {
+			flex-direction: column;
+			align-items: stretch;
+			padding: 10rem 3rem 3rem 3rem;
+			text-align: center;
+		}
+	}
+
+	&__item {
+		cursor: pointer;
+		transition: all 0.4s;
+		@include respond(maiz) {
+			padding: 1rem;
+			border-bottom: 3px solid transparent;
+			&:hover {
+				background-image: linear-gradient(
+					transparent,
+					rgba(color(primary, d), 0.1)
+				);
+				border-bottom: 3px solid rgba(color(primary, d), 0.5);
+			}
+		}
+		&:hover {
+			font-weight: 600;
+		}
+	}
+
+	&__link {
+		color: color(primary, a);
+		text-decoration: none;
+		filter: $dark-color;
+		@include respond(maiz) {
+			color: color(neutral, c);
+		}
+	}
+
+	&__toggle {
+		display: none;
+		font-size: 3rem;
+		color: color(primary, a);
+		cursor: pointer;
+		position: absolute;
+		right: 1rem;
+		top: 3.2rem;
+		transition: all 0.3s;
+
+		@include respond(maiz) {
+			display: block;
+		}
+	}
+}
+
+//
+
+.active-nav {
+	right: 0;
+}
+
+.toggle-close {
+	color: color(neutral, c);
+	&::after {
+		content: '×';
+		position: absolute;
+		font-size: 4rem;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: color(primary, a);
+	}
+}
+
+.delete {
+	@include respond(centeno) {
+		display: none;
+	}
+}

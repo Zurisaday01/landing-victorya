@@ -1,0 +1,43 @@
+// ------------- genera font family -----------------
+@mixin font-family($el) {
+	font-family: get-font-family($el);
+}
+
+// ------------- genera font size -----------------
+@mixin font-size($el) {
+	font-size: get-font-size($el);
+}
+
+//-------------- center elements ------------------
+@mixin centerEl() {
+	max-width: $width__el;
+	margin: 0 auto;
+}
+
+@mixin styleBtn() {
+	cursor: pointer;
+	box-shadow: 0 8px 2rem color(primary, b);
+	color: color(neutral, c);
+	background-color: color(primary, b);
+	transition: all 0.3s ease-in;
+
+	&:hover {
+		transform: translateY(-8px);
+		background-color: color(primary, c);
+	}
+	&:active {
+		transform: translateY(0px);
+		background-color: color(primary, b);
+	}
+}
+
+@mixin btn-fast-style() {
+	cursor: pointer;
+	transition: all 0.3s;
+	box-shadow: 0 2rem 2rem rgba(color(neutral, a), 0.4);
+	&:hover {
+		transform: translateY(-8px);
+		background-color: color(neutral, b);
+		color: color(neutral, c);
+	}
+}

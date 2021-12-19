@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- font family -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;700&family=Lemonada:wght@500&family=Montserrat:ital,wght@0,300;0,400;1,300&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- box icons -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<!-- my style -->
+		<link rel="stylesheet" href="./style.css" />
+		<!-- video js .css-->
+		<link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
+		
+		<!-- my scrit -->
+		<script src="./main.js" defer></script>
+		<script src="https://vjs.zencdn.net/7.14.3/video.min.js" defer></script>
+		<title>🍔 Vctorya 🌮</title>
+	</head>
+	<body>
+		<!-- HEADER -->
+		<header class="header">
+			<div class="header__contain">
+				<div class="logo">
+					<span class='logo__name'>Victorya</span>
+				</div>
+				<div class="navigation">
+					<nav class="navigation__menu" id="nav-menu">
+						<ul class="navigation__list">
+							<li class="navigation__item">
+								<a href="#home" class="navigation__link">Home</a>
+							</li>
+							<li class="navigation__item delete">
+								<a href="#section-about" class="navigation__link ">About</a>
+							</li>
+							<li class="navigation__item">
+								<a href="#section-info" class="navigation__link">Information</a>
+							</li>
+							<li class="navigation__item">
+								<a href="#section-food" class="navigation__link">Menu</a>
+							</li>
+							<li class="navigation__item">
+								<a href="#section-package" class="navigation__link">Package</a>
+							</li>
+							
+							<li class="navigation__item">
+								<a href="#section-contact" class="navigation__link">Contact us</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="navigation__toggle" id="nav-toggle">
+						<i class="bx bx-menu"></i>
+					</div>
+			</div>
+		
+		</header>
+		<div class="preloader">
+			<img class="preloader__img" src="./Preloader.gif" alt="preload">
+		</div>
+		<div class="video hidden"></div>
+			<div class="video__modal hidden">
+				<video
+				id="my-video"
+				class="video-js video__video-js"
+				controls
+				preload="auto"
+				data-setup="{}"
+			  >	
+			  <source src="./video.mp4" type="video/mp4" />
+			  
+			</div>
+			<div class="video__overlay hidden">
+				<button class="video__close" id="btn-video-close">
+					<i class='bx bx-x'></i>
+				</button>
+			</div>
+		</div> 
+
+		<!-- MAIN -->
+		<main class="container-grid">
+			<!-- HERO -->
+			<div class="hero" id="home">
+				<div class="hero__contain">
+					<h1 class="heading heading--primary">
+						Good food choices are
+good investments.
+					</h1>
+					<p class="paragraph hero__paragraph">
+						There is a powerful need for symbolism, and that means the architecture must have something that appeals to the human heart.
+					</p>
+					<div class="hero__btns">
+						<a href="#section-about" class="btn btn--primary">Down for more</a>
+						<button class="btn--play btn-video-open">
+							<i class='bx bx-play'></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- SECTION ABOUT -->
+			<section class="sections section-about" id="section-about">
+				<h2 class="heading heading--secondary section-about__heading">The best comfort food will always be greens, cornbread, and fried chicken.</h2>
+
+				<div class="summary">
+					<div class="summary__tab-container">
+						<button class="btn btn--1 summary__tab--active summary__tab" data-tab='1'>
+							<span class="summary__number">01</span> About Us
+						</button>
+						<button class="btn btn--2 summary__tab" data-tab='2'>
+							<span class="summary__number">02</span> Comfort
+						</button>
+						<button class="btn btn--3 summary__tab" data-tab='3'>
+							<span class="summary__number">03</span> Places
+						</button>
+					</div>
+				
+					<div class="summary__content summary__content--1 summary__content--active">
+						<h3 class="summary__title summary__title--2">About Us</h3>
+						<p class="paragraph summary__p">
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magnar, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+						</p>
+						<div class="summary__icon summary__icon--2">
+							<i class='bx bxs-crown'></i>
+						</div>
+					</div>
+					<div class="summary__content summary__content--2 ">
+						<h3 class="summary__title summary__title--1">Comfort</h3>
+						<p class="paragraph summary__p">
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magnum. Stet clita kasd gubergren, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+						</p>
+						<div class="summary__icon summary__icon--1">
+							<i class='bx bx-meteor' ></i>
+						</div>
+					</div>
+					<div class="summary__content summary__content--3 ">
+						<h3 class="summary__title summary__title--3">Places</h3>
+						<p class="paragraph summary__p">
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquy. Stet clita kasd gubergren, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+						</p>
+						<div class="summary__icon summary__icon--3">
+							<i class='bx bx-street-view' ></i>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- SECTION INFORMATION -->
+			<section class="sections section-information section-effect" id="section-info">
+				<div class="section-information__info">
+					<h2 class="heading heading--secondary u-mb-m">
+						The best comfort food will always be greens, cornbread, and fried chicken.
+					</h2>
+					<p class="paragraph">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+					</p>
+				</div>
+				<div class="demonstrate section-information__imgs">
+					<div class="demonstrate__box demonstrate__box--small demonstrate__box--order">
+						<img class= "demonstrate__img" src="./imagen-1-lazy.jpg" data-src="./imagen-1.jpg" alt="together">
+					</div>
+					<div class="demonstrate__box">
+						<img class= "demonstrate__img" src="./imagen-2-lazy.jpg" data-src="./imagen-2.jpg" alt="salad">
+					</div>
+					<div class="demonstrate__box">
+						<img class= "demonstrate__img" src="./imagen-3-lazy.jpg" data-src="./imagen-3.jpg" alt="rise">
+					</div>
+					<div class="demonstrate__box  demonstrate__box--small" >
+						<img class= "demonstrate__img" src="./imagen-4-lazy.jpg" data-src="./imagen-4.jpg" alt="chicken">
+					</div>
+				</div>
+			</section>
+			<!-- SECTION VIDEO -->
+			<section class="sections section-video" id="section-video">
+				<div class="section-video__info">
+					<h2 class="heading heading--secondary u-c-w">
+						When a man's stomach is full it makes no difference whether he is rich or poor.
+					</h2>
+					<p class="paragraph section-video__p u-c-w">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+					</p>
+				
+					<button class="btn--play u-style-btn-section btn-video-open">
+						<i class='bx bx-play' ></i>
+					</button>
+				</div>
+			</section>
+			<!-- SECTION FOOD -->
+			<section class="sections section-food" id="section-food">
+				<div class="section-food__header">
+					<h2 class="heading heading--secondary u-mb-m">
+						Explore Our Foods
+					</h2>
+					<p class="paragraph">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
+				</div>
+				<div class="section-food__main">
+					<div class="food">
+
+						<div class="food__el">
+							<div class="food__el--front food__side food__side--front">
+								<img class="food__img" src="./meal-1-lazy.jpg" data-src="./meal-1.jpg" alt="meal 1">
+								<div class="food__description">
+									<h3 class="heading heading--third u-c-w">
+										Ham Sandwich
+									</h3>
+									<span class="food__text" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr</span>
+									<span class="food__stars">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</span>
+								</div>
+							</div>
+							<div class="food__el--back food__side food__side--back">
+								<span class="food__price">$10.50</span>
+							</div>
+						</div>
+						<div class="food__el">
+							<div class="food__el--front food__side food__side--front">
+								<img class="food__img" src="./meal-2-lazy.jpg" data-src="./meal-2.jpg" alt="meal 2">
+								<div class="food__description">
+									<h3 class="heading heading--third u-c-w">
+										Ham Sandwich
+									</h3>
+									<span class="food__text" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr</span>
+									<span class="food__stars">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</span>
+								</div>
+							</div>
+							<div class="food__el--back food__side food__side--back">
+								<span class="food__price">$10.50</span>
+							</div>
+						</div>
+						<div class="food__el">
+							<div class="food__el--front food__side food__side--front">
+								<img class="food__img" src="./meal-3-lazy.jpg" data-src="./meal-3.jpg" alt="meal 3">
+								<div class="food__description">
+									<h3 class="heading heading--third u-c-w">
+										Ham Sandwich
+									</h3>
+									<span class="food__text" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr</span>
+									<span class="food__stars">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</span>
+								</div>
+							</div>
+							<div class="food__el--back food__side food__side--back">
+								<span class="food__price">$10.50</span>
+							</div>
+						</div>
+						<div class="food__el">
+							<div class="food__el--front food__side food__side--front">
+								<img class="food__img" src="./meal-4-lazy.jpg" data-src="./meal-4.jpg" alt="meal 4">
+								<div class="food__description">
+									<h3 class="heading heading--third u-c-w">
+										Ham Sandwich
+									</h3>
+									<span class="food__text" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr</span>
+									<span class="food__stars">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</span>
+								</div>
+							</div>
+							<div class="food__el--back food__side food__side--back">
+								<span class="food__price">$10.50</span>
+							</div>
+						</div>
+						<div class="food__el">
+							<div class="food__el--front food__side food__side--front">
+								<img class="food__img" src="./meal-5-lazy.jpg" data-src="./meal-5.jpg" alt="meal 5">
+								<div class="food__description">
+									<h3 class="heading heading--third u-c-w">
+										Ham Sandwich
+									</h3>
+									<span class="food__text" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr</span>
+									<span class="food__stars">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</span>
+								</div>
+							</div>
+							<div class="food__side food__el--back food__side--back">
+								<span class="food__price">$10.50</span>
+							</div>
+						</div>
+						<div class="food__el">
+							<div class="food__el--front food__side food__side--front">
+								<img class="food__img" src="./meal-6-lazy.jpg" data-src="./meal-6.jpg" alt="meal 6">
+								<div class="food__description">
+									<h3 class="heading heading--third u-c-w">
+										Ham Sandwich
+									</h3>
+									<span class="food__text" >Lorem ipsum dolor sit amet, consetetur sadipscing elitr</span>
+									<span class="food__stars">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</span>
+								</div>
+							</div>
+							<div class="food__el--back food__side food__side--back">
+								<span class="food__price">$10.50</span>
+							</div>
+						</div>
+					
+					</div>
+				</div>
+			</section>
+			<!-- SECTION CAROUSEL -->
+			<section class="sections section-carousel section-effect" id="section-package">
+				<h2 class="heading heading--secondary u-mb-m">
+					Our Popular Recipes
+				</h2>
+				<div class="section-carousel__slide">
+					<div class="slide">
+						<div class="slide__el slide__el--1">
+							<div class="recipe">
+								<img src="./carousel-1.jpg" alt="food" class="recipe__img">
+								<div class="recipe__content">
+									<div class="recipe__info">
+										<h4 class="heading heading--fourth u-c-w">Crinkle Top Brownies</h4>
+										<span class="recipe__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr….</span>
+									</div>
+									<a href="" class="recipe__btn">&rarr;</a>
+								</div>
+							</div>
+						</div>
+						<div class="slide__el slide__el--2">
+							<div class="recipe">
+								<img src="./carousel-2.jpg" alt="food" class="recipe__img">
+								<div class="recipe__content">
+									<div class="recipe__info">
+										<h4 class="heading heading--fourth u-c-w">Crinkle Top Brownies</h4>
+										<span class="recipe__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr….</span>
+									</div>
+									<a href="" class="recipe__btn">&rarr;</a>
+								</div>
+							</div>
+						</div>
+						<div class="slide__el slide__el--3">
+							<div class="recipe">
+								<img src="./carousel-3.jpg" alt="food" class="recipe__img">
+								<div class="recipe__content">
+									<div class="recipe__info">
+										<h4 class="heading heading--fourth u-c-w">Crinkle Top Brownies</h4>
+										<span class="recipe__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr….</span>
+									</div>
+									<a href="" class="recipe__btn">&rarr;</a>
+								</div>
+							</div>
+						</div>
+						<div class="slide__el slide__el--4">
+							<div class="recipe">
+								<img src="./carousel-4.jpg" alt="food" class="recipe__img">
+								<div class="recipe__content">
+									<div class="recipe__info">
+										<h4 class="heading heading--fourth u-c-w">Crinkle Top Brownies</h4>
+										<span class="recipe__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr….</span>
+									</div>
+									<a href="" class="recipe__btn">&rarr;</a>
+								</div>
+							</div>
+						</div>
+						<div class="slide__el slide__el--5">
+							<div class="recipe">
+								<img src="./carousel-5.jpg" alt="food" class="recipe__img">
+								<div class="recipe__content">
+									<div class="recipe__info">
+										<h4 class="heading heading--fourth u-c-w">Crinkle Top Brownies</h4>
+										<span class="recipe__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr….</span>
+									</div>
+									<a href="" class="recipe__btn">&rarr;</a>
+								</div>
+							</div>
+						</div>
+						<div class="slide__el slide__el--6">
+							<div class="recipe">
+								<img src="./carousel-6.jpg" alt="food" class="recipe__img">
+								<div class="recipe__content">
+									<div class="recipe__info">
+										<h4 class="heading heading--fourth u-c-w">Crinkle Top Brownies</h4>
+										<span class="recipe__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr….</span>
+									</div>
+									<a href="" class="recipe__btn">&rarr;</a>
+								</div>
+							</div>
+						</div>
+						<div class="slide__el ñslide__el--7">
+							<div class="recipe">
+								<img src="./carousel-7.jpg" alt="food" class="recipe__img">
+								<div class="recipe__content">
+									<div class="recipe__info">
+										<h4 class="heading heading--fourth u-c-w">Crinkle Top Brownies</h4>
+										<span class="recipe__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr….</span>
+									</div>
+									<a href="" class="recipe__btn">&rarr;</a>
+								</div>
+							</div>
+						</div>
+
+						<button class="slide__btn slide__btn--left">&larr;</button>
+						<button class="slide__btn slide__btn--right">&rarr;</button>
+				
+						<div class="dots"></div>
+					</div>
+				</div>
+				
+			</section>
+			<!-- SECTION CONTACT -->
+			<section class="sections section-contact section-effect" id="section-contact">
+				<div class="contact">
+					<h2 class="heading heading--secondary">Want to get the latest Updates?</h2>
+					
+					<form class="contact__form">
+						<input class="contact__email" type="email" placeholder="example@yourmail.com">
+						<input type="submit" class="contact__btn" value="Subscribe">
+					</form>
+				</div>
+			</section>
+		</main>
+		<!-- FOOTER -->
+		<footer class="footer">
+			<p class="footer__paragraph">
+				Thanks for watching my landing, the original design it's not mine, I changed some detail and modified a little the design.
+			</p>
+			<div class="logo">
+				<span class='logo__name footer__logo'>Victorya</span>
+			</div>
+		</footer>
+	</body>
+</html>

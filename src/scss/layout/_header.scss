@@ -1,0 +1,23 @@
+.header {
+	height: $header-heigh;
+	// The position will going to change when the class sticky would be activated
+	position: absolute;
+	width: 100%;
+	padding: 3rem 0 6rem 0;
+	z-index: 250;
+	&__contain {
+		display: flex;
+		gap: 8rem;
+		@include centerEl();
+		align-items: center;
+	}
+}
+
+.sticky {
+	background-color: color(primary, d);
+	position: fixed;
+	z-index: 2000;
+
+	box-shadow: $shadow;
+	transition: all 0.5s;
+}

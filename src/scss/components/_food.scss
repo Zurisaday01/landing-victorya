@@ -1,0 +1,99 @@
+.food {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 7rem;
+
+	@include respond(mijo) {
+		column-gap: 5rem;
+		justify-content: center;
+	}
+
+	//each element, INDIVIDUAL
+	&__el {
+		position: relative;
+		perspective: 150rem;
+		-moz-perspective: 150rem;
+		height: 45rem;
+		width: 40rem;
+
+		&:hover &--front {
+			transform: rotateY(180deg);
+		}
+		&:hover &--back {
+			transform: rotateY(0);
+		}
+		@include respond(alpiste) {
+			height: clamp(40rem, 8vw, 45rem);
+			width: clamp(35rem, 8vw, 40rem);
+		}
+	}
+	//sides
+	&__side {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		backface-visibility: hidden;
+		transition: all 0.6s ease;
+		cursor: pointer;
+		border-radius: 1rem;
+		overflow: hidden;
+		box-shadow: $shadow;
+		// -------
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 60%;
+		&--front {
+			background-color: color(primary, a);
+		}
+
+		&--back {
+			background-image: linear-gradient(
+				to bottom left,
+				color(primary, a),
+				color(neutral, a)
+			);
+			transform: rotateY(180deg);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__img {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__description {
+		color: color(primary, d);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr min-content;
+		padding: 3rem 2rem;
+		align-content: center;
+		gap: 2rem;
+	}
+
+	&__text {
+		grid-column: 2 / -1;
+		font-size: 1.3rem;
+		text-align: right;
+		display: block;
+		align-self: center;
+	}
+
+	&__stars {
+		text-align: center;
+		grid-column: 1 / -1;
+	}
+
+	&__price {
+		color: color(primary, d);
+		font-size: 6rem;
+		@include font-family(heading);
+	}
+}

@@ -1,0 +1,80 @@
+.contact {
+	background-color: color(primary, d);
+	height: 20vw;
+	width: 65vw;
+	margin: 0 auto;
+	border-radius: 1rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+	overflow: hidden;
+	@include respond(trigo) {
+		padding: 4rem;
+		gap: 2rem;
+		text-align: center;
+		width: 80vw;
+	}
+
+	@include respond(arroz) {
+		height: max-content;
+		width: 70vw;
+	}
+
+	&__form {
+		width: 60%;
+		display: flex;
+		@include respond(arroz) {
+			width: 100%;
+		}
+		@include respond(maiz) {
+			flex-direction: column;
+		}
+	}
+
+	&__email {
+		border: none;
+		padding: 2rem;
+		border-bottom-left-radius: 1rem;
+		border-top-left-radius: 1rem;
+		flex: 1;
+		outline: none;
+		@include respond(maiz) {
+			border-top-left-radius: 0rem;
+			border-top-left-radius: 0rem;
+			text-align: center;
+		}
+	}
+
+	&__btn {
+		border: none;
+		background-color: color(primary, b);
+		padding: 2rem 4rem;
+		color: color(neutral, c);
+		border-bottom-right-radius: 1rem;
+		border-top-right-radius: 1rem;
+		cursor: pointer;
+		@include respond(trigo) {
+			padding: 2rem;
+		}
+		@include respond(maiz) {
+			border-top-right-radius: 0rem;
+			border-bottom-left-radius: 1rem;
+		}
+	}
+}
+
+.send {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: color(primary, b);
+	color: color(primary, d);
+	padding: 1rem;
+	width: 100%;
+}

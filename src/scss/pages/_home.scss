@@ -1,0 +1,202 @@
+.hero {
+	position: relative;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	// z-index: -1;
+
+	&::before {
+		content: '';
+		background-image: linear-gradient(
+				to right,
+				color(primary, d),
+				rgba(color(primary, d), 0.5) 60%,
+				transparent 90%
+			),
+			url(./hero.jpg);
+		background-position: center;
+		background-size: cover;
+		width: 100vw;
+		height: 100%;
+		position: absolute;
+		left: -5vw;
+		z-index: -1;
+		@include respond(arroz) {
+			background-image: linear-gradient(
+					to bottom,
+					color(primary, d),
+					rgba(color(primary, d), 0.5)
+				),
+				url(./hero.jpg);
+		}
+	}
+
+	&__contain {
+		//nivelar el spacio de arriba para centrar el contenido correctamente
+		margin-top: $header-heigh;
+		width: 50vw;
+		display: flex;
+		flex-direction: column;
+		gap: 5rem;
+
+		@include respond(avena) {
+			width: 70vw;
+		}
+		@include respond(arroz) {
+			width: 100%;
+			align-items: center;
+			text-align: center;
+		}
+		@include respond(centeno) {
+			gap: 3rem;
+		}
+	}
+
+	&__paragraph {
+		width: 60%;
+		@include respond(arroz) {
+			color: #5d5d5d;
+			font-weight: 700;
+		}
+		@include respond(centeno) {
+			width: 100%;
+		}
+	}
+
+	&__btns {
+		display: flex;
+		gap: 3rem;
+	}
+}
+
+.section-about {
+	margin: 10rem 0;
+
+	&__heading {
+		display: block;
+		max-width: 110rem;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 5rem;
+
+		@include respond(cebada) {
+			margin-bottom: 10rem;
+		}
+	}
+	@include respond(centeno) {
+		display: none;
+	}
+}
+
+.section-information {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10rem;
+	&__info {
+		flex: 0 0 45%;
+
+		@include respond(arroz) {
+			flex: 0 0 20%;
+		}
+	}
+
+	@include respond(arroz) {
+		flex-direction: column;
+		gap: 6rem;
+		justify-content: center;
+		text-align: center;
+		padding-top: 20rem;
+	}
+	@include respond(cebada) {
+		padding-top: 0rem;
+	}
+}
+
+.section-video {
+	display: flex;
+	align-items: center;
+	position: relative;
+	&__info {
+		width: 100%;
+		height: min-content;
+		background-image: linear-gradient(
+				rgba(color(primary, a), 0.6),
+				rgba(color(primary, a), 0.6)
+			),
+			url(./video-bg.jpg);
+		background-position: center;
+		background-size: cover;
+		border-radius: 1rem;
+		overflow: hidden;
+		text-align: center;
+		padding: 8rem 10rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 4rem;
+
+		@include respond(cebada) {
+			margin-bottom: 15rem;
+		}
+		@include respond(maiz) {
+			padding: 3rem 5rem;
+			gap: 2rem;
+		}
+		@include respond(centeno) {
+			margin-bottom: 0rem;
+			padding: 8rem 1rem;
+		}
+	}
+
+	&__p {
+		width: 80%;
+		margin: 0 auto;
+
+		@include respond(maiz) {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+.section-food {
+	margin-bottom: 15rem;
+	&__header {
+		text-align: center;
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	&__main {
+		margin-top: 6rem;
+		position: relative;
+	}
+}
+
+.section-carousel {
+	&__slide {
+		position: relative;
+	}
+}
+
+.section-contact {
+	margin-top: 10rem;
+	background-image: linear-gradient(
+		to right bottom,
+		color(neutral, a),
+		color(primary, a)
+	);
+	height: 50vh;
+	position: relative;
+	@include respond(maiz) {
+		height: 60vh;
+	}
+}
+.section-effect {
+	transition: all 0.5s;
+}
+.section--hidden {
+	opacity: 0;
+	transform: translateY(8rem);
+}

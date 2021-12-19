@@ -1,0 +1,51 @@
+// -------- Colors ------------
+
+$color: (
+	primary: (
+		a: #255a7e,
+		b: #f98169,
+		c: #f9a769,
+		d: #f6f3ec,
+		e: #452268,
+	),
+	neutral: (
+		a: #333333,
+		b: #7c7c7c,
+		c: #fcfcfc,
+	),
+);
+
+// ------- Typography -----------
+$font__family: (
+	heading: (
+		'Kaisei HarunoUmi',
+		serif,
+	),
+	body: (
+		'Montserrat',
+		sans-serif,
+	),
+	logo: (
+		'Lemonada',
+		cursive,
+	),
+);
+
+// ------- Font Size -----------
+$font__size: (
+	alfa: clamp(4rem, 8vw, 7rem),
+	beta: clamp(2rem, 8vw, 4rem),
+	gamma: 1.7rem,
+	delta: clamp(8px, 3vw, 1.5rem),
+);
+
+// -------- heigh header --------
+$header-heigh: 7rem;
+
+// -------- shadow --------
+$shadow: 0 0 2rem rgba(color(neutral, a), 0.2);
+
+//-------- separation center elements ------------
+$width__el: 90vw;
+
+$dark-color: brightness(70%);

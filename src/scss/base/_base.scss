@@ -1,0 +1,55 @@
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+
+	::-webkit-scrollbar {
+		width: 1.5rem;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: color(primary, a);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: color(primary, d);
+		box-shadow: inset 0 0 6px rgba(color(neutral, a), 0.2);
+	}
+}
+
+body {
+	background-color: #fcfcfc;
+	opacity: 1;
+	background-size: 20px 20px;
+	background-image: repeating-linear-gradient(
+		0deg,
+		#f9f6f0,
+		#f9f6f0 1px,
+		#fcfcfc 1px,
+		#fcfcfc
+	);
+	@include font-family(body);
+	font-weight: 500;
+	@include font-size(gamma);
+	overflow-x: hidden;
+	position: relative;
+	color: color(neutral, b);
+	height: 100vh;
+}
+
+.container-grid {
+	@include centerEl();
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: repeat(4, 100vh);
+
+	@include respond(sorgo) {
+		gap: 5rem;
+	}
+	@include respond(cebada) {
+		grid-template-rows: repeat(3, 100vh);
+	}
+}
+
+.lazy-img {
+	filter: blur(1rem);
+}

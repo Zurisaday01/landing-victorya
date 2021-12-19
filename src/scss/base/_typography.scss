@@ -1,0 +1,23 @@
+.heading {
+	@include font-family(heading);
+	color: color(primary, a);
+	&--primary {
+		@include font-size(alfa);
+	}
+
+	&--secondary {
+		@include font-size(beta);
+	}
+
+	&--third {
+		font-size: 3rem;
+	}
+
+	&--fourth {
+		font-size: 2rem;
+	}
+}
+
+.paragraph {
+	line-height: 1.7;
+}

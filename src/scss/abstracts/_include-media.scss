@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+$breakpoints: (
+	'alpiste': (
+		max-width: 31.25em,
+	),
+	//500
+	'centeno':
+		(
+			max-width: 37.5em,
+		),
+	//600
+	'maiz':
+		(
+			max-width: 43.75em,
+		),
+	//700
+	'sorgo':
+		(
+			max-width: 53.125em,
+		),
+	//850
+	'arroz':
+		(
+			max-width: 57.1875em,
+		),
+	//915
+	'mijo':
+		(
+			max-width: 58.75em,
+		),
+	//940
+	'avena':
+		(
+			max-width: 75em,
+		),
+	//1200
+	'trigo':
+		(
+			max-width: 62.5em,
+		),
+	//1000
+	'cebada':
+		(
+			max-width: 78.125em,
+		),
+	//1250
+) !default;
+
+@mixin respond($bp) {
+	$value: map-get($breakpoints, $bp);
+
+	@if $value != null {
+		@media only screen and #{inspect(map-get($breakpoints, $bp))} {
+			@content;
+		}
+	} @else {
+		@warn "Desafortunadamente, la clave no se encuentra en el mapa`#{$breakpoints}`. "
+        + "Por favor asegurese de que la clave se encuentre en el mapa `$breakpoints`";
+	}
+}

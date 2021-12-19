@@ -1,0 +1,43 @@
+.btn {
+	display: block;
+	padding: 2rem;
+	width: 20rem;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	border: none;
+
+	&--primary {
+		@include styleBtn;
+	}
+
+	&--play {
+		z-index: 400;
+		font-size: 4rem;
+		outline: none;
+		border: none;
+		border-radius: 10rem;
+		padding: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 200;
+		@include styleBtn;
+	}
+
+	// tabs
+	&--1 {
+		background-color: #fa97c0;
+		@include btn-fast-style();
+	}
+
+	&--2 {
+		background-color: #fac297;
+		@include btn-fast-style();
+	}
+
+	&--3 {
+		background-color: #97fad9;
+		@include btn-fast-style();
+	}
+}
